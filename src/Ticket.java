@@ -4,7 +4,7 @@ public class Ticket {
 
     public Ticket(int numBlocks) {
         blocks = new Block[numBlocks];
-        for(int i = 0; i < blocks.length; i++) {
+        for (int i = 0; i < blocks.length; i++) {
             blocks[i] = new Block(6);
 
         }
@@ -24,27 +24,23 @@ public class Ticket {
         for (int i = 0; i < usedNumbers.length; i++) {
             usedNumbers[i] = false;
         }
-        for( int i = 0; i < blocks.length; i++) {
-           int[] numbers = blocks[i].getNumbers();
-           for (int j = 0; j < numbers.length; j ++) {
-               int indexToCheck = numbers[j];
-               usedNumbers[indexToCheck] = true;
-               }
-           }
+        for (int i = 0; i < blocks.length; i++) {
+            int[] numbers = blocks[i].getNumbers();
+            for (int j = 0; j < numbers.length; j++) {
+                int indexToCheck = numbers[j];
+                usedNumbers[indexToCheck] = true;
+            }
+        }
         boolean addComma = false;
-        for (int i = 0; i < usedNumbers.length; i++ ) {
+        for (int i = 0; i < usedNumbers.length; i++) {
             if (usedNumbers[i]) {
                 if (!addComma) {
-                System.out.print(i);
-                addComma = true;
-            }else {
+                    System.out.print(i);
+                    addComma = true;
+                } else {
                     System.out.print(", " + i);
                 }
-
-                }
-
+            }
         }
     }
-
-
 }
