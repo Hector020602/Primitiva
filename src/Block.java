@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Block {
     private int[] numbers;
     private int randomNumber;
-    public Block(int numNumbers) {
+    public Block(int numNumbers) { //2
         initNumbersArray(numNumbers);
         int count = 0;
         while (count < numbers.length) {
@@ -29,7 +29,7 @@ public class Block {
         }
         return false;
     }
-    private void initNumbersArray(int numNumbers) {
+    private void initNumbersArray(int numNumbers) { //1
         if (numNumbers < 6) {
             numNumbers = 6;
         }
@@ -42,7 +42,7 @@ public class Block {
         }
     }
 
-    @Override
+    @Override //3
     public String toString() {
         String s = "" + numbers[0];
         for (int i = 1;i < numbers.length; i++) {
@@ -53,6 +53,6 @@ public class Block {
 
     public int[] getNumbers() {
         return numbers;
-    }
+    } //4
 }
 

@@ -2,7 +2,7 @@ public class Ticket {
 
     private Block[] blocks;
 
-    public Ticket(int numBlocks) {
+    public Ticket(int numBlocks) {  //1
         blocks = new Block[numBlocks];
         for (int i = 0; i < blocks.length; i++) {
             blocks[i] = new Block(6);
@@ -10,7 +10,7 @@ public class Ticket {
         }
     }
 
-    @Override
+    @Override //2
     public String toString() {
         String s = "";
         for (int i = 1; i < blocks.length; i++) {
@@ -19,7 +19,7 @@ public class Ticket {
         return s;
     }
 
-    public void printUsedNumbers() {
+    public void printUsedNumbers() { //3
         boolean[] usedNumbers = new boolean[50];
         for (int i = 0; i < usedNumbers.length; i++) {
             usedNumbers[i] = false;
